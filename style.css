@@ -1,21 +1,189 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
 }
-input{
-    padding: 10px;
-    margin: 5px;
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-button{
-    padding: 10px 20px;
-    background: green;
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input {
+    padding: 12px;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Prevents zoom on iOS */
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 12px 24px;
+    background: #4CAF50;
     color: white;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
-li{
+
+button:hover {
+    background: #45a049;
+}
+
+#expenseList {
     list-style: none;
-    margin: 10px;
-    color: purple;
-    padding: 10px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #4CAF50;
+}
+
+.expense-text {
+    flex: 1;
+    text-align: left;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+.total-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f5e8;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+}
+
+#total {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 1.2em;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .expense-text {
+        width: 100%;
+    }
+
+    .delete-btn {
+        align-self: flex-end;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    li {
+        padding: 12px;
+    }
+
+    .total-section {
+        padding: 12px;
+    }
 }
