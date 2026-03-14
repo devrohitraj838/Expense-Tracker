@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background: #f4f4f4;
+    background: linear-gradient(rgb(241, 241, 73),rgb(255, 179, 37),rgb(147, 242, 147));
     margin: 0;
     padding: 20px;
     min-height: 100vh;
